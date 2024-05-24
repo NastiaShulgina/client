@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import AudioRecorder from './components/AudioRecorder';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <AudioRecorder />
-      </header>
+      {/* <Header /> */}
+      <AudioRecorder />
     </div>
   );
 }
