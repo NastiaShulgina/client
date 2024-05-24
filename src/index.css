@@ -1,5 +1,10 @@
 body {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/837/177/non_2x/light-pink-blue-blurred-colorful-background-brand-new-colorful-illustration-in-blur-style-base-for-your-app-design-vector.jpg");
   background-color: #f4f4f9; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   color: #333;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -8,7 +13,6 @@ body {
   line-height: 1.4;
   margin: 0;
   overflow-x: hidden;
-  /* max-width: 50%; */
 }
 
 p, h1, h2, h3, h4, h5, h6 {

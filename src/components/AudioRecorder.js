@@ -145,16 +145,16 @@ const AudioRecorder = () => {
         <div className="main-content">
             <div>
                 <h1>Recognize a song by humming &#129304;</h1>
-                <img src={recording ? humming : stuck} alt={recording ? "Recording in progress" : "Not recording"} />
-                <h3>{recording ? 'Recording in progress...' : 'Click to record yourself'} &#128071;</h3>
+                <img src={recording ? humming : stuck} alt={recording ? "Recording in progress" : "Not recording"} className="gif" />
+                <h3 className="helper">{recording ? 'Recording in progress...' : 'Click to record yourself'} &#128071;</h3>
                 <button
                     onClick={startRecording}
                     disabled={recording || loading}
-                    className={recording ? 'recording' : ''}
+                    className={recording ? 'recording' : 'start-recording'}
                 >
                     {recording ? 'Stop Recording' : 'Start Recording'}
                 </button>
-                {audioURL && <audio src={audioURL} controls />}
+                {/* {audioURL && <audio src={audioURL} controls />} */}
                 {loading && <p>Loading...</p>}
                 {songDetails && (
                     <div className="song-card">

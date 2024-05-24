@@ -1,19 +1,18 @@
 .App {
-  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 80vh; */
   text-align: center;
 }
 
 body {
-  background-color: #f4f4f9; 
+  background-color: #f4f4f9;
   color: #333;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4;
   margin: 0;
 }
@@ -22,24 +21,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  /* height: 90vh; */
+  margin-top: 100px;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* margin: 0 0 10px 0; */
   padding: 0;
 }
 
 h2 {
   color: #f15438;
-  /* color: #7437ca; */
-  /* color: #3700B3; */
 }
 
-img {
-  width: 50%;
-  max-width: 300px; /* Ensures the image does not expand too much */
-  padding: 10px 0;
+.helper {
+  /* background-color: #ed6e58; */
+  /* margin-top: -46px; */
+  font-size: 20px;
+}
+
+.gif {
+  width: 75%;
+  max-width: 400px;
+  padding: 25px 0;
 }
 
 button {
@@ -49,13 +59,17 @@ button {
   font-weight: 300;
   font-style: normal;
   line-height: 2;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   padding: 10px 20px;
   margin: 20px 0 10px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+}
+
+.start-recording {
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -63,12 +77,12 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #BB86FC; 
+  background-color: #BB86FC;
   cursor: not-allowed;
 }
 
 audio {
-  width: 100%; 
+  width: 100%;
 }
 
 button:active {
@@ -82,16 +96,18 @@ button:focus {
 
 @keyframes pulse {
   0% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
+
   50% {
-      transform: scale(1.1);
-      opacity: 0.7;
+    transform: scale(1.1);
+    opacity: 0.7;
   }
+
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -102,7 +118,7 @@ button.recording {
 .features-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
 }
@@ -114,9 +130,9 @@ button.recording {
   background: white;
   border-radius: 10px;
   padding: 10px 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 200px; /* Sets a fixed width for each card */
+  width: 200px;
 }
 
 .song-card {
@@ -126,12 +142,10 @@ button.recording {
   background: white;
   border-radius: 10px;
   padding: 15px 25px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card h4 {
-  /* color: #7437ca;
-  color: #3700B3; */
   font-size: 16px;
   margin-bottom: 5px;
 }
@@ -148,52 +162,30 @@ button.recording {
   justify-content: center;
 }
 
-.song-details h2, .song-details p {
-  margin: 0 5px; /* Adjust spacing as needed */
+.song-details h2,
+.song-details p {
+  margin: 0 5px;
 }
 
-.song-title, .song-artist {
-  font-size: 1.5rem; /* Example font size, adjust as needed */
+.song-title,
+.song-artist {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #e9593f; /* Example color */
+  color: #e9593f;
 }
 
 .song-prefix {
-  font-size: 0.9rem; /* Smaller text for 'Song recognized:' and 'by' */
+  font-size: 0.9rem;
   font-weight: bold;
   color: #ed6e58;
 }
-
-/* .error-message {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid orange;
-  animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-  font-family: monospace;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: orange; }
-}
-
-.error-message {
-  animation: typing 2s steps(40, end) forwards, blink-caret 0.75s 8 step-end;
-} */
 
 .error-message {
   margin: 30px 0;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #ed6e58; /* Initially show the cursor */
-  animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end 2s; /* Stop blinking after typing is done */
+  border-right: 3px solid #ed6e58;
+  animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end 2s;
   font-family: monospace;
   font-size: 1rem;
   font-weight: 300;
@@ -201,29 +193,100 @@ button.recording {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100%; border-color: transparent; } /* Ensure border is transparent at the end */
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%;
+    border-color: transparent;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #ed6e58 }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #ed6e58
+  }
 }
 
-
-/* .error-message {
-  color: #FFD2D2 !important;
-  background-color:#e9593f;
-  padding: 10px;
-  margin: 30px 0;
-  border-radius: 5px;
-  animation: pulseError 3s infinite;
-  font-size: 1.2rem;
-  font-weight: 500;
+.app-header-container {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;  
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes pulseError {
-  0% { background-color: #FFD2D2; }
-  50% { background-color: #FFBABA; }
-  100% { background-color: #FFD2D2; }
-} */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-container h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.navigation a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.navigation a:hover {
+  color: #ed6e58;
+}
+
+.auth-buttons button {
+  margin-left: 15px;
+  padding: 0px 20px;
+  background-color: #7437ca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.auth-buttons button:hover {
+  background-color: #3700B3;
+}
+
+.login-btn {
+  background-color: #7437ca;
+}
+
+.auth-buttons button.signup-btn {
+  background-color: #f4f4f914;
+  border: 1px solid #7437ca;
+  ;
+  color: #7437ca;
+}
+
+.auth-buttons button.signup-btn:hover {
+  border: 1px solid #3700B3;
+  color: #3700B3;
+}
