@@ -21,7 +21,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 90vh; */
   margin-top: 120px;
 }
 
@@ -37,7 +36,6 @@ h3,
 h4,
 h5,
 h6 {
-  /* margin: 0 0 10px 0; */
   padding: 0;
 }
 
@@ -46,8 +44,6 @@ h2 {
 }
 
 .helper {
-  /* background-color: #ed6e58; */
-  /* margin-top: -46px; */
   font-size: 20px;
 }
 
@@ -56,7 +52,6 @@ h2 {
   max-width: 400px;
   margin: 25px 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* filter: drop-shadow(0 0 0.95rem #a859d28a); */
 }
 
 button {
@@ -299,13 +294,10 @@ button.recording {
 }
 
 footer {
-  /* position: fixed;
-  bottom: 0; */
   margin-top: 30px;
   color: #33333386;
   font-family: 'Poppins', sans-serif;
   padding: 20px;
-  /* text-align: left; */
   font-size: 14px;
   border-top: 0.5px solid #ccc;
 }
