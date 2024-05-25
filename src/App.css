@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   /* height: 90vh; */
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .main-func {
@@ -75,8 +75,8 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.start-recording {
-  margin-bottom: 20px;
+.start-recording, .recording {
+  margin-bottom: 30px;
 }
 
 button:hover {
@@ -245,13 +245,13 @@ button.recording {
 }
 
 .logo-container img {
-  width: 50px;
+  width: 60px;
   height: auto;
   margin-right: 10px;
 }
 
 .logo-container h1 {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
 }
 
@@ -296,4 +296,20 @@ button.recording {
 .auth-buttons button.signup-btn:hover {
   border: 1px solid #3700B3;
   color: #3700B3;
+}
+
+footer {
+  /* position: fixed;
+  bottom: 0; */
+  margin-top: 30px;
+  color: #33333386;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  /* text-align: left; */
+  font-size: 14px;
+  border-top: 0.5px solid #ccc;
+}
+
+.footer-container p {
+  margin: 5px 0;
 }

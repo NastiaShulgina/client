@@ -108,7 +108,7 @@ const AudioRecorder = () => {
             newMediaRecorder.stop();
             stream.getTracks().forEach(track => track.stop());
             setRecording(false);
-        }, 10000); // Adjust as needed 
+        }, 10000);
     };
 
     function convertToKey(response) {
